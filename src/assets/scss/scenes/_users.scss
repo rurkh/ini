@@ -1,0 +1,86 @@
+.users-filter {
+  > .row {
+    > .col {
+      min-width: 1px;
+    }
+  }
+}
+
+.user-details {
+
+  &__title {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .item {
+    $label-width: 120px;
+
+    margin: 10px 0;
+    display: flex;
+
+    &--label {
+      padding-right: 10px;
+      flex: 0 0 $label-width;
+      max-width: $label-width;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      color: #999;
+    }
+
+    &--value {
+      flex: 0 0 calc(100% - #{$label-width});
+      max-width: calc(100% - #{$label-width});
+      overflow-wrap: break-word;
+
+      p {
+        margin: 0;
+
+        & + p {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .user-detail-links {
+    a {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    a span {
+      border-bottom: 1px solid transparent;
+      transition: $transition;
+    }
+
+    a:hover span {
+      border-color: $primaryColor;
+    }
+
+    a:not(:last-child):after {
+      content: ',';
+      margin-right: 6px;
+      margin-left: 2px;
+      color: $textColor;
+      display: inline-block;
+    }
+  }
+
+}
+
+.user-details-export-btn-box {
+  text-align: right;
+
+  .user-details-export-btn {
+    width: 6%;
+    max-width: 36px;
+
+    span {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      margin: auto;
+    }
+  }
+}

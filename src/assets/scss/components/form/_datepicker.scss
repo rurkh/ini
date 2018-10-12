@@ -1,0 +1,99 @@
+body  .ui-datepicker-trigger.ui-button-icon-only {
+  border-color: transparent;
+
+  .ui-button-icon {
+    margin: 0;
+  }
+
+  &:enabled:hover {
+    border-color: transparent;
+  }
+}
+
+body .ui-calendar {
+  $bg-color: #00AADB;
+
+  .ui-datepicker {
+
+    .ui-datepicker-header {
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      background-color: $bg-color;
+      border: 0;
+      border-bottom: 1px solid $contentBorderColor;
+
+      .ui-datepicker-title {
+        margin: 0 auto;
+
+        select.ui-datepicker-month {
+          width: 90px;
+        }
+
+        select.ui-datepicker-year {
+          width: 55px;
+        }
+      }
+
+      .ui-datepicker-prev,
+      .ui-datepicker-next {
+        position: static;
+        transition: $transition;
+
+        .fa {
+          transition: $transition;
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: $bg-color;
+        }
+      }
+
+      .ui-datepicker-next {
+        order: 1;
+      }
+    }
+
+    thead tr {
+      background-color: $bg-color;
+    }
+
+    tbody td {
+      padding: 4px 2px;
+      text-align: center;
+
+      a {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        line-height: 18px;
+        transition: $transition;
+      }
+    }
+
+    .ui-datepicker-buttonbar button {
+      min-width: auto;
+    }
+
+
+  }
+
+  .ui-timepicker {
+    background-color: transparent;
+    border: 0;
+    color: $textColor;
+    display: flex;
+    justify-content: center;
+
+    > div a {
+      transition: $transition;
+      border-radius: 50%;
+      cursor: pointer;
+
+      span {
+        color: $textColor;
+      }
+    }
+  }
+}

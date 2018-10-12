@@ -1,0 +1,156 @@
+body {
+    /* Messages */
+    .ui-messages {
+        
+        .ui-messages-wrapper {
+            padding: $headerPadding;
+        }
+        
+        ul {
+            display: inline-block;
+            margin-left: 0;
+        }
+        
+        &.ui-messages-info {
+            background-color: $infoMessageBgColor;
+            border-color: $infoMessageBorderColor;
+            color: $infoMessageTextColor;
+        }
+        
+        &.ui-messages-warn {
+            background-color: $warnMessageBgColor;
+            border-color: $warnMessageBorderColor;
+            color: $warnMessageTextColor;
+        }
+        
+        &.ui-messages-error {
+            background-color: $errorMessageBgColor;
+            border-color: $errorMessageBorderColor;
+            color: $errorMessageTextColor;
+        }
+                
+        &.ui-messages-success {
+            background-color: $successMessageBgColor;
+            border-color: $successMessageBorderColor;
+            color: $successMessageTextColor;
+        }
+        
+        .ui-messages-close {
+            text-decoration: none;
+            right: .25em;
+        }
+    }
+
+    .ui-messages .ui-messages-icon {
+        background: none;
+        color: #fff;
+        margin-top: -2px;
+        
+        &.fa-info-circle {
+            @include material-icon("info");
+            font-size: 1.75em;
+        }
+        
+        &.fa-warning {
+            @include material-icon("warning");
+            font-size: 1.75em;
+        }
+        
+        &.fa-close {
+            @include material-icon("error_outline");
+            font-size: 1.75em;
+        }
+        
+        &.fa-check {
+            @include material-icon("check_circle");
+            font-size: 1.75em;
+        }
+    }
+    
+    .ui-growl {
+        
+        &.ui-growl-topright, &.ui-growl-topleft {
+            top: 90px;
+        }
+        
+        .ui-growl-item-container {
+            opacity: 1;
+
+            &.ui-growl-message-info {
+                background-color: $infoMessageBgColor;
+                color: $infoMessageTextColor;
+
+                .ui-growl-icon-close {
+                    color: $infoMessageTextColor;
+                }
+            }
+        
+            &.ui-growl-message-warn {
+                background-color: $warnMessageBgColor;
+                color: $warnMessageTextColor;
+
+                .ui-growl-icon-close {
+                    color: $warnMessageTextColor;
+                }
+            }
+        
+            &.ui-growl-message-error {
+                background-color: $errorMessageBgColor;
+                color: $errorMessageTextColor;
+
+                .ui-growl-icon-close {
+                    color: $errorMessageTextColor;
+                }
+            }
+                
+            &.ui-growl-message-success {
+                background-color: $successMessageBgColor;
+                color: $successMessageTextColor;
+
+                .ui-growl-icon-close {
+                    color: $successMessageTextColor;
+                }
+            }
+        
+            &.ui-shadow {
+                @include overlay-content-shadow();
+            }
+        }
+        
+        .ui-growl-item {
+            .ui-growl-image {
+                background: none;
+                font-size: 36px;
+                
+                &.fa-info-circle {
+                    @include material-icon("info");
+                    font-size: 1.75em;
+                }
+                
+                &.fa-exclamation-circle {
+                    @include material-icon("warning");
+                    font-size: 1.75em;
+                }
+                
+                &.fa-close {
+                    @include material-icon("error_outline");
+                    font-size: 1.75em;
+                }
+                &.fa-warning {
+                    @include material-icon("warning");
+                    font-size: 1.75em;
+                }
+                
+                &.fa-check {
+                    @include material-icon("check_circle");
+                    font-size: 1.75em;
+                }   
+            }
+                        
+            .ui-growl-icon-close {
+                @include material-icon("close");
+                font-size: 24px;
+            }        
+        }
+    }
+}

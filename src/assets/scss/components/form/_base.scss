@@ -1,0 +1,88 @@
+body .md-inputfield {
+  label {
+    top: -20px;
+    font-size: 12px;
+    left: 0;
+
+    label {
+      position: static;
+    }
+  }
+
+  input:focus ~ label,
+  input.ui-state-filled ~ label,
+  .ui-inputwrapper-focus ~ label,
+  .ui-inputwrapper-filled ~ label {
+    color: #999;
+  }
+}
+
+body .ui-inputtext {
+  padding-left: 5px;
+
+  &.search-filter {
+    padding-left: 25px;
+  }
+}
+
+.search-filter {
+  .fa {
+    color: $textSecondaryColor;
+  }
+}
+
+body .ui-inputgroup {
+  .md-inputfield label {
+    top: -20px;
+  }
+
+  .ui-inputgroup-addon {
+    padding-top: 1px;
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+}
+
+.checkbox-wrapper {
+  padding: 5px 5px;
+  width: 100%;
+
+  &-6 {
+    width: 50%;
+    float: left;
+    padding: 0 5px;
+  }
+}
+
+.field-required {
+  color: #aa0000;
+  margin-left: 3px;
+}
+
+.form-item {
+  padding: 14px 5px;
+
+  .location-button {
+    margin-top: -11px;
+  }
+
+  .item--label {
+    margin-right: 10px;
+    box-sizing: border-box;
+    color: #999;
+  }
+
+  .item--value {
+    overflow-wrap: break-word;
+
+    p {
+      padding-left: 15px;
+      margin: 15px 0 0 0;
+    }
+  }
+
+  .ui-dropdown {
+    width: 100% !important;
+  }
+}
+

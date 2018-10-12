@@ -1,0 +1,147 @@
+.panel {
+  $border-radius: 3px;
+  $border-color: #e3e3e3;
+  $padding: 15px;
+
+  background-color: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+
+  > * {
+    box-sizing: border-box;
+  }
+
+  .panel-hr {
+    margin: $padding (-$padding);
+    border-bottom: 1px solid $border-color;
+  }
+
+  .panel-header {
+    $border-radius: 3px;
+    $border-color: #e3e3e3;
+    $padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    border-bottom: 1px solid $border-color;
+    background-color: #f7f7f9;
+    padding: $padding;
+    height: 50px;
+    @include border-radius-top($border-radius - 1);
+    @include border-radius-bottom(0);
+
+    .panel-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 15px 0 0;
+    }
+
+    .panel-actions {
+      margin-left: auto;
+
+      .panel-title-btn,
+      .ui-button {
+        vertical-align: top;
+        margin-top: -4px;
+        margin-bottom: -4px;
+
+        &.btn-sm {
+          margin: 1px 0 0;
+        }
+      }
+    }
+  }
+
+  .panel-content {
+    overflow: auto;
+    max-height: $panel-height;
+}
+
+  .panel-content-item {
+    padding: $padding;
+    line-height: $contentLineHeight;
+
+    & + .panel-content-item {
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  .panel-footer {
+    padding: $padding;
+    border: 0 none;
+    border-top: 1px solid $border-color;
+    margin: 0;
+  }
+}
+
+.ui-dialog  {
+  .panel {
+    border: 0;
+
+    .panel-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .users-table {
+    @media (min-width: 1200px) {
+      .ui-datatable .ui-datatable-scrollable-body {
+        min-height: 300px;
+      }
+
+      .ui-datatable.ui-datatable-virtual-scrollable .ui-datatable-scrollable-table-wrapper {
+        max-height: 300px;
+      }
+    }
+  }
+}
+
+.panel-tabs {
+  margin: -16px;
+
+  .panel-tab {
+    padding: 15px;
+    border: 1px solid transparent;
+    cursor: default;
+    transition: $transition;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+
+    &:first-child {
+      border-radius: 0 0 0 3px;
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &.active {
+      color: $textColor;
+      cursor: default;
+    }
+
+    &:not(.active) {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+
+    &:hover,
+    &.active {
+      border-color: #e3e3e3;
+      background-color: white;
+    }
+
+    &.active {
+      border-bottom-color: white;
+      cursor: default;
+    }
+  }
+}
+
+

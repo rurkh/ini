@@ -1,0 +1,19 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@import 'ultima/themes/theme-initrack';
+@import 'ultima/layout/layout-initrack';
+@import 'variables';
+@import 'helpers/__helpers';
+@import 'base';
+@import 'layout/header';
+
+@import 'components/__components';
+@import "scenes/__scenes";
+
+.pac-container {
+  z-index: 10000;
+}

@@ -1,0 +1,33 @@
+$container-max-widths: (
+        md: 720px,
+        lg: 1140px
+) !default;
+
+$grid-columns: 12;
+
+$grid-breakpoints: (
+        xs: 0,
+        md: 768px,
+        lg: 1200px
+);
+
+$grid-gutter-width: 20px;
+
+// stylelint-disable
+$spacer: 5px;
+$spacers: ();
+$spacers: map-merge((
+        0: 0,
+        5: ($spacer * 1),
+        10: ($spacer * 2),
+        15: ($spacer * 3),
+        20: ($spacer * 4),
+        25: ($spacer * 5)
+), $spacers);
+
+$title-height: 34px;
+
+$panel-height: calc(100vh - #{$header-height + $grid-gutter-width*3 + $title-height + 52px});
+$table-height: calc(100vh - #{$header-height + $grid-gutter-width*3 + $title-height + 120px + 38px});
+$table-height-district: calc(100vh - #{$header-height + $grid-gutter-width*3 + $title-height + 120px + 55px});
+

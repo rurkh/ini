@@ -1,0 +1,92 @@
+.ui-button {
+  overflow: hidden;
+  position: relative;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  padding: 0 1em;
+  height: 2.25em;
+  line-height: 2.25em;
+  outline: 2px;
+  border: 0 none;
+  @include raised-btn();
+  @include transition(all $transitionDuration);
+
+  .ui-button-text {
+    padding: 0;
+    vertical-align: top;
+  }
+
+  .ui-button-icon {
+    vertical-align: middle;
+  }
+
+  &.ui-button-icon-only {
+    @include border-radius(50%);
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0;
+
+    .ui-button-icon {
+      vertical-align: baseline;
+      line-height: inherit;
+    }
+  }
+
+  @include btn($primaryColor, $primaryTextColor);
+
+  &.secondary-btn {
+    @include btn($accentColor, $accentTextColor);
+  }
+
+  &.blue-grey-btn {
+    @include btn($blueGrey);
+  }
+
+  &.cyan-btn {
+    @include btn($cyan);
+  }
+
+  &.teal-btn {
+    @include btn($teal);
+  }
+
+  &.red-btn {
+    @include btn($red);
+  }
+
+  &.green-btn {
+    @include btn($green);
+  }
+
+  &.deep-orange-btn {
+    @include btn($deepOrange);
+  }
+
+  &.purple-btn {
+    @include btn($purple);
+  }
+
+  &.pink-btn {
+    @include btn($pink);
+  }
+
+  &.amber-btn {
+    @include btn($amber, $textColor);
+  }
+
+  &.orange-btn {
+    @include btn($orange);
+  }
+
+  &.brown-btn {
+    @include btn($brown);
+  }
+
+  &.indigo-btn {
+    @include btn($indigo);
+  }
+
+  &.flat-btn {
+    @include no-shadow();
+  }
+}

@@ -1,0 +1,122 @@
+.ui-multiselect {
+  .ui-multiselect-panel {
+    padding: 0;
+
+    .ui-multiselect-header {
+      border: {
+        width: 0 0 1px 0;
+        color: $contentBorderColor;
+      };
+      line-height: $dropdown-item-line-h;
+      background-color: transparent;
+      border-radius: 0;
+      padding: $dropdown-item-p;
+      display: flex;
+      align-items: center;
+      cursor: default;
+      margin: 0;
+
+      .ui-chkbox .ui-chkbox-box {
+        flex: 0 0 auto;
+        border: 2px solid $textSecondaryColor;
+
+        &.ui-state-active {
+          border-color: $primaryColor;
+        }
+      }
+
+      // search block
+      .ui-multiselect-filter-container {
+        flex-basis: 0;
+        flex-grow: 1;
+        width: auto;
+
+        .ui-inputtext {
+          color: $textColor;
+          padding-top: 2px;
+          padding-bottom: 2px;
+
+          &:focus {
+            border-bottom-color: $primaryColor;
+            padding-bottom: 1px;
+          }
+        }
+
+        .fa {
+          color: $textSecondaryColor;
+        }
+      }
+
+      .ui-multiselect-close {
+        flex: 0 0 auto;
+        position: static;
+        margin-left: auto;
+        cursor: pointer;
+        transition: $transition;
+        border-radius: 50%;
+
+        span {
+          color: $textSecondaryColor;
+          transition: $transition;
+        }
+
+        &:hover {
+          background-color: $textSecondaryColor;
+
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .ui-multiselect-items-wrapper {
+      padding: 0;
+    }
+
+    .ui-multiselect-item {
+      padding: $dropdown-item-p;
+      line-height: $dropdown-item-line-h;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .ui-multiselect-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+body .ui-dropdown-panel {
+  .ui-dropdown-filter-container {
+    background-color: transparent;
+    padding: $dropdown-item-p;
+
+    .fa {
+      color: $textSecondaryColor;
+      right: auto;
+      left: $dropdown-item-p-x;
+      top: $dropdown-item-p-y;
+    }
+
+    .ui-inputtext {
+      padding: 2px 2px 2px 25px;
+      color: inherit;
+      border-bottom-color: $contentBorderColor;
+
+      &:focus {
+        border-bottom-color: $primaryColor;
+      }
+    }
+  }
+
+  .ui-dropdown-item {
+    padding: $dropdown-item-p;
+    line-height: $dropdown-item-line-h;
+    display: flex;
+    align-items: center;
+    min-height: calc(#{$dropdown-item-p-y + $dropdown-item-line-h});
+  }
+}

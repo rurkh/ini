@@ -1,0 +1,88 @@
+body {
+  background-color: #ededed;
+}
+
+.layout-container .layout-main {
+  padding: calc(70px + #{$grid-gutter-width}) $grid-gutter-width $grid-gutter-width $grid-gutter-width;
+}
+
+.page-title {
+  margin: 0 0 20px;
+  line-height: $title-height;
+  display: flex;
+  align-items: center;
+
+  .material-icons,
+  .fa {
+    height: auto;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+    font-size: $title-height;
+    color: $primaryColor;
+  }
+}
+
+.material-icons,
+.fa {
+  overflow: hidden;
+}
+
+.search-filter {
+  position: relative;
+
+  input {
+    padding-left: 25px;
+  }
+
+  .fa-search {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+textarea,
+input {
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    background: linear-gradient(#013e64, #03aadb);
+
+    .mobile-message {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      flex-direction: column;
+
+      .fa {
+        margin-bottom: 40px;
+        font-size: 100px;
+      }
+    }
+  }
+}
+
+.suffix {
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}

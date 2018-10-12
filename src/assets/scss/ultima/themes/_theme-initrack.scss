@@ -1,0 +1,12 @@
+$primaryColor: #003E65;
+$primaryDarkColor: #002e4c;
+$primaryLightColor: #004e7f;
+$primaryTextColor: #ffffff;
+$accentColor: #00AADB;
+$accentDarkColor: #0096c2;
+$accentLightColor: #00bef5;
+$accentTextColor: #fff;
+
+$af: linear-gradient(#003E65, #00AADB);
+
+@import '../sass/theme/_theme';

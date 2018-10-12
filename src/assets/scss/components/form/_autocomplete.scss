@@ -1,0 +1,37 @@
+body {
+  .ui-autocomplete.ui-autocomplete-multiple {
+    .ui-autocomplete-multiple-container.ui-inputtext {
+      padding: 2px 0;
+    }
+
+    .ui-autocomplete-multiple-container.ui-state-focus {
+      padding-bottom: 1px;
+    }
+
+    .ui-autocomplete-token {
+      max-width: calc(100% - 4px);
+      margin: 2px;
+
+      .ui-autocomplete-token-label {
+        max-width: calc(100% - 24px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .ui-autocomplete-input-token input {
+      width: 150px;
+    }
+  }
+
+  .ui-autocomplete .ui-autocomplete-panel {
+    max-width: 100%;
+    .ui-autocomplete-list-item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: $dropdown-item-p;
+      line-height: $dropdown-item-line-h;
+    }
+  }
+}
+

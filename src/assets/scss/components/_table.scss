@@ -1,0 +1,206 @@
+$date-width: 80px;
+
+.ui-datatable {
+  &.ui-datatable-scrollable thead.ui-datatable-thead > tr th {
+    font-size: 13px;
+
+    .ui-column-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+  }
+
+  thead.ui-datatable-thead > tr th {
+    padding: 10px 4px;
+    font-size: 13px;
+    line-height: 15px;
+    background-color: transparent;
+  }
+
+  .ui-datatable-data tr td {
+    body & {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 8px 4px;
+      font-size: 13px;
+    }
+  }
+
+  .ui-sortable-column {
+    position: relative;
+
+    .ui-sortable-column-icon {
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+  .no-value {
+    display: block;
+    margin: 0 auto;
+    width: 10px;
+    text-align: center;
+  }
+
+  .td-centered {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .td-active {
+    width: 50px;
+
+    .ui-chkbox {
+      margin: 0;
+    }
+  }
+
+  .td-date {
+    width: $date-width;
+  }
+
+  .td-action {
+    width: 54px;
+    white-space: nowrap;
+
+    .ui-button {
+      vertical-align: top;
+      margin: 0;
+    }
+  }
+}
+
+.status {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  &.status-active {
+    background-color: $successMessageBgColor;
+  }
+
+  &.status-inactive {
+    background-color: $errorMessageBgColor;
+  }
+}
+
+.users-table,
+.depositions-table {
+  @media (min-width: 1200px) {
+    .ui-datatable .ui-datatable-scrollable-body {
+      min-height: $table-height;
+    }
+
+    .ui-datatable.ui-datatable-virtual-scrollable .ui-datatable-scrollable-table-wrapper {
+      max-height: $table-height;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .ui-datatable .ui-datatable-scrollable-body {
+      min-height: 300px;
+    }
+
+    .ui-datatable.ui-datatable-virtual-scrollable .ui-datatable-scrollable-table-wrapper {
+      max-height: 300px;
+    }
+  }
+}
+
+.districts-table {
+  thead.ui-datatable-thead > tr th {
+    padding: 0 4px;
+    height: 54px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: 1200px) {
+    .ui-datatable .ui-datatable-scrollable-body {
+      min-height: $table-height-district;
+    }
+
+    .ui-datatable.ui-datatable-virtual-scrollable .ui-datatable-scrollable-table-wrapper {
+      max-height: $table-height-district;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .ui-datatable .ui-datatable-scrollable-body {
+      min-height: 300px;
+    }
+
+    .ui-datatable.ui-datatable-virtual-scrollable .ui-datatable-scrollable-table-wrapper {
+      max-height: 300px;
+    }
+  }
+}
+
+
+.td-date .ui-calendar.district-calendar {
+  width: $date-width;
+  padding: 0 4px;
+  transform: translateY(calc((-43px + 24px)/2));
+  z-index: 1;
+
+  input {
+    font-size: 13px;
+    text-align: center;
+    padding: 0 0 1px;
+    line-height: 15px;
+    height: 17px;
+  }
+
+  .ui-datepicker {
+    text-align: left;
+    font-size: 12px;
+
+    .ui-datepicker-header {
+      font-size: 14px;
+    }
+  }
+
+  .ui-datepicker thead tr,
+  .ui-datepicker tbody tr {
+    border: 0;
+  }
+
+  .ui-datepicker thead tr th {
+    font-size: 12px;
+    color: white;
+  }
+
+  .ui-datepicker tbody tr td {
+    font-size: 12px;
+    padding: .25em .125em;
+    box-sizing: border-box;
+  }
+}
+
+body .ui-datatable-loader {
+  .ui-widget-overlay {
+    opacity: 0;
+    background-color: white;
+  }
+
+  & + .ui-datatable-scrollable-wrapper {
+    opacity: 0;
+  }
+}
+
+.ui-datatable-scrollable-wrapper {
+  transition: $transition;
+}
+
+.ui-datatable-scrollable-table-wrapper {
+  margin-top: -1px;
+}
+
+body .ui-datatable .ui-datatable-data tr.ui-state-highlight {
+  border: 1px solid #cacaca;
+}

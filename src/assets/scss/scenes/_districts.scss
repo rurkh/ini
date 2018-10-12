@@ -1,0 +1,96 @@
+.my-data-details,
+.district-details {
+  &__title {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: -5px 0;
+
+    .ui-button {
+      margin: 5px 0;
+
+      .fa {
+        float: left;
+      }
+
+      body & {
+        width: 100%;
+        max-width: 180px;
+      }
+    }
+  }
+
+  .item {
+    &--label {
+      margin-right: 10px;
+      box-sizing: border-box;
+      color: #999;
+    }
+
+    &--value {
+      overflow-wrap: break-word;
+
+      p {
+        padding-left: 15px;
+        margin: 15px 0 0 0;
+      }
+    }
+    & + .item {
+      margin-top: 10px;
+    }
+  }
+
+  .item-columns {
+    .item {
+      $label-width: 180px;
+      $label-width-md: 130px;
+      display: flex;
+
+      &--label {
+        padding-right: 10px;
+        margin-right: 0;
+        flex: 0 0 $label-width;
+        max-width: $label-width;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+        color: #999;
+      }
+
+      &--value {
+        flex: 0 0 calc(100% - #{$label-width});
+        max-width: calc(100% - #{$label-width});
+        overflow-wrap: break-word;
+      }
+
+      @media (max-width: 1300px) {
+        &--label {
+          flex: 0 0 $label-width-md;
+          max-width: $label-width-md;
+        }
+
+        &--value {
+          flex: 0 0 calc(100% - #{$label-width-md});
+          max-width: calc(100% - #{$label-width-md});
+        }
+      }
+    }
+  }
+
+  .district-calendar.ui-calendar {
+    position: absolute;
+
+    .ui-datepicker {
+      top: 20px !important;
+
+      td {
+        overflow: visible;
+      }
+    }
+  }
+}

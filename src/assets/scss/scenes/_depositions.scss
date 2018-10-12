@@ -1,0 +1,29 @@
+.deposition-details {
+
+  &__title {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .item {
+    &--label {
+      margin-right: 10px;
+      box-sizing: border-box;
+      color: #999;
+    }
+
+    &--value {
+      overflow-wrap: break-word;
+
+      p {
+        padding-left: 15px;
+        margin: 15px 0 0 0;
+      }
+    }
+
+    & + .item {
+      margin-top: 20px;
+    }
+  }
+
+}

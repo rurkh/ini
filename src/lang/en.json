@@ -1,0 +1,23 @@
+{
+  "auth.button.login": "Login",
+  "user.delete_confirm.header": "Deleting user",
+  "user.delete_confirm.content":
+    "You are deleting {firstname} {lastname}, are you sure?",
+  "deposition.delete_confirm.header": "Confirm deletion",
+  "deposition.delete_confirm.content":
+    "Are you sure you want to delete the deposition {id} \"{name}\"?",
+  "district.delete_confirm.header": "Confirm deletion",
+  "district.delete_confirm.content":
+    "Are you sure you want to delete the district {id} \"{name}\"?",
+  "assignment.delete_confirm.header": "Confirm deletion",
+  "assignment.delete_confirm.content":
+    "Are you sure you want to delete the assignment of {firstname} {lastname} to the district {district_id}?",
+  "reclamation.delete_confirm.header": "Confirm deletion",
+  "reclamation.delete_confirm.content":
+    "Are you sure you want to delete the reclamation \"{text}\"?",
+  "characteristic.delete_confirm.header": "Confirm deletion",
+  "characteristic.delete_confirm.content":
+    "Are you sure you want to delete the characteristic \"{hint}\"?",
+  "app.notifications.new_messages.summary": "New Messages",
+  "app.notifications.new_messages.detail": "You have {count} new messages"
+}

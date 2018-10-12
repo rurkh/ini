@@ -1,0 +1,58 @@
+{
+  "name": "initrack",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://develop.initrack.stagesrv.net/",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.5",
+    "date-fns": "^1.29.0",
+    "formik": "^0.11.11",
+    "history": "^4.7.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "lodash": "^4.17.4",
+    "node-sass-chokidar": "^1.1.2",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.10.2",
+    "primereact": "^1.5.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-dropzone": "^4.2.8",
+    "react-google-maps": "^9.4.5",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "^1.1.1",
+    "react-svg-spinner": "^1.0.0",
+    "react-transition-group": "^2.2.1",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1",
+    "yup": "^0.24.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "build:css": "node-sass-chokidar --source-map true --include-path ./src --include-path ./node_modules src/assets/scss/ -o src/assets/css/",
+    "watch:css": "npm run build:css && node-sass-chokidar --source-map true --include-path ./src --include-path ./node_modules src/assets/scss/ -o src/assets/css/ --watch --recursive",
+    "precommit": "lint-staged",
+    "start:js": "react-scripts start",
+    "build:js": "react-scripts build",
+    "start": "npm-run-all -p watch:css start:js",
+    "build": "npm-run-all build:css build:js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  }
+}
